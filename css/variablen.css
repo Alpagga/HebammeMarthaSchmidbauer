@@ -1,0 +1,10 @@
+:root {
+  /* --- Farben --- */
+  --color-orange: #FF6600;       
+  --color-white: #FFF8E7;     
+  --color-brown: #5C4033;
+
+  /* --- Schriftarten --- */
+  --font-heading: 'Georgia', serif;  /* h1, h2 */
+  --font-base: 'Arial', sans-serif;  /* Fließtext */
+}

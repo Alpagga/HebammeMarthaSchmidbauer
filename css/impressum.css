@@ -1,0 +1,41 @@
+
+/* Main-Container */
+.impressum {
+  height: 70vh; /* volle Höhe des Viewports */
+  display: flex;
+  flex-direction: column; /* Elemente untereinander */
+  justify-content: center; /* vertikal zentrieren */
+  align-items: center;     /* horizontal zentrieren */
+  text-align: center;      /* Text zentrieren */
+  padding: 20px;           /* Abstand innen */
+}
+
+/* Wrapper sorgt dafür, dass Footer unten ist, wenn Content klein ist */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* mindestens volle Höhe des Viewports */
+}
+
+/* Main nimmt den restlichen Platz ein */
+main {
+  flex: 1; /* wächst automatisch, wenn wenig Content */
+}
+
+/* Footer bleibt unten, aber nicht sticky */
+.cbn-footer {
+  font-size: 0.95rem;
+  background: var(--color-brown);
+  color: var(--color-white);
+  padding: 2rem 1rem;
+}
+
+.no-animation .fade-in,
+.no-animation h1,
+.no-animation h2,
+.no-animation h3,
+.no-animation p {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+}

@@ -1,0 +1,78 @@
+/* Kontaktformular Styling */
+#Kontakt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1rem;   /* etwas kompakter */
+  background-color: var(--color-white);
+  min-height: 60vh;       /* kleiner */
+  font-family: 'Junction', sans-serif;
+  font-size: 0.85rem;     /* kleinere Basis-Schrift */
+  color: var(--color-brown);
+}
+
+#Kontakt .forminator-ui {
+  width: 70vw;
+  max-width: 500px;
+
+  max-height: 50vh;        /* echte Höhenbegrenzung */
+  overflow-y: auto;        /* erzwingt Scrollen */
+  padding: 1rem;
+
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1.5px 8px rgba(0, 0, 0, 0.04);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Labels */
+#Kontakt .forminator-field label {
+  font-size: 0.75rem;
+  margin-bottom: 0.15rem; /* kompakter */
+}
+
+/* Eingabefelder */
+#Kontakt .forminator-field input,
+#Kontakt .forminator-field textarea {
+  font-size: 0.8rem;        /* kleiner */
+  padding: 0.3rem 0.45rem;  /* enger gepolstert */
+  margin-bottom: 0.25rem;   /* enger zusammen */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Button */
+#Kontakt .forminator-button-submit {
+  background-color: #e9a4b4;
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem 0.9rem;  /* kompakter */
+  font-size: 0.8rem;
+  transition: background-color 0.2s ease-in-out;
+  align-self: flex-start;
+  margin-top: 0.4rem;
+}
+
+#Kontakt .forminator-button-submit:hover {
+  background-color: var(--color-brown);
+}
+
+/* Responsive Anpassung für kleinere Bildschirme */
+@media (max-width: 768px) {
+  #Kontakt .forminator-ui {
+    width: 85vw;
+    max-width: 400px;
+    padding: 0.5rem;
+  }
+
+  #Kontakt {
+    min-height: 55vh;
+    font-size: 0.8rem;
+  }
+}
+
