@@ -186,3 +186,20 @@ const observer = new IntersectionObserver(
 sections.forEach((sec) => observer.observe(sec));
 
 });
+
+
+
+
+function playBackgroundVideo() {
+    const video = document.getElementById('bgVideo');
+    if(video && video.paused) {
+        video.muted = true;
+        video.play().catch(err => console.log('Autoplay blockiert:', err));
+    }
+    // Eventlistener entfernen, einmalig starten
+    window.removeEventListener('touchstart', playBackgroundVideo);
+    window.removeEventListener('scroll', playBackgroundVideo);
+}
+
+window.addEventListener('touchstart', playBackgroundVideo, {once: true});
+window.addEventListener('scroll', playBackgroundVideo, {once: true});

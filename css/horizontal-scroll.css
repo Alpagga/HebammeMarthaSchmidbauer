@@ -96,17 +96,52 @@ html, body {
   color: var(--color-brown);
 }
 
+
+
+
+
+
+
 .normal-section ul.ausbildungsliste {
-  list-style: none;          /* keine Punkte */
-  padding: 0;
+  list-style: none;
+  padding-left: 2rem;   /* Platz für die Linie und Pfeil */
   margin: 1rem 0 0 0;
-  font-size: 1.2rem;         /* besseres Verhältnis zur Überschrift */
+  font-size: 1.2rem;
   line-height: 1.6;
+  position: relative;   /* für die vertikale Linie */
+}
+
+/* durchgezogene Linie links */
+.normal-section ul.ausbildungsliste::before {
+  content: "";
+  position: absolute;
+  left: 1rem;          /* Position der Linie */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--color-brown);
+  opacity: 0;
+  animation: fadeIn 0.5s 0.5s forwards; /* Spitze erscheint nach der Linie */
+}
+
+/* Pfeilspitze unten */
+.normal-section ul.ausbildungsliste::after {
+  content: "";
+  position: absolute;
+  left: 0.75rem;             /* Linie zentriert für die Spitze */
+  bottom: -0.25rem;
+  transform: translateX(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 8px solid var(--color-brown);
+  opacity: 0;
+  animation: fadeIn 0.5s 0.5s forwards; /* Spitze erscheint nach der Linie */
 }
 
 .normal-section ul.ausbildungsliste li {
   margin: 0.5rem 0;
-  max-width: 70vw;           /* wie deine Texte, schön zentrierbar */
+  max-width: 70vw;
+  position: relative;
 }
 
 .ausbildungsliste p {
@@ -219,9 +254,6 @@ html, body {
     gap: 4rem;
   }
 }
-
-
-
 
 
 

@@ -14,7 +14,7 @@
 
 #Kontakt .forminator-ui {
   width: 70vw;
-  max-width: 500px;
+  max-width: 1000px;
 
   max-height: 50vh;        /* echte Höhenbegrenzung */
   overflow-y: auto;        /* erzwingt Scrollen */
@@ -35,14 +35,15 @@
   margin-bottom: 0.15rem; /* kompakter */
 }
 
-/* Eingabefelder */
 #Kontakt .forminator-field input,
 #Kontakt .forminator-field textarea {
-  font-size: 0.8rem;        /* kleiner */
-  padding: 0.3rem 0.45rem;  /* enger gepolstert */
-  margin-bottom: 0.25rem;   /* enger zusammen */
+  font-size: 0.8rem;
+  padding: 0.5rem 0.75rem;  /* Innenabstand im Feld */
+  margin: 0 0.5rem 0.5rem;  /* oben 0, links/rechts 0.5rem, unten 0.5rem */
+  width: calc(100% - 1rem); /* volle Breite minus linke/rechte Margin */
   border: 1px solid #ccc;
   border-radius: 4px;
+  box-sizing: border-box;    /* wichtig, damit Padding und Border mitgerechnet werden */
 }
 
 /* Button */

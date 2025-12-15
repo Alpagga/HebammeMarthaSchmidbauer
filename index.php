@@ -2,10 +2,8 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
-<video id="bgVideo" autoplay muted loop playsinline preload="auto" poster="<?php echo get_template_directory_uri(); ?>/assets/images/Background.jpg">
-    <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/Background.webm" type="video/webm">
+<video id="bgVideo" autoplay muted loop playsinline>
     <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/Background.mp4" type="video/mp4">
-    Dein Browser unterstützt dieses Videoformat nicht.
 </video>
 
 
@@ -41,16 +39,15 @@
  </div>
 
 <section class="normal-section" id="Start">
-  
   <!-- Logo -->
-<div class="logo-container">
-    <?php echo file_get_contents(get_template_directory() . '/assets/photos/HebammeMarthaLogo.svg'); ?>
-</div>
+  <div class="logo-container">
+      <?php echo file_get_contents(get_template_directory() . '/assets/photos/HebammeMarthaLogo.svg'); ?>
+  </div>
 
-<h1 class="fade-in">Hebamme Martha Schmidbauer</h1>
+  <h1>Hebamme Martha Schmidbauer</h1>
   <h3>Kassenhebamme in Innsbruck</h3>
 
-<!--CSS in landingpage.css-->
+  <!--CSS in landingpage.css-->
   <div class="welcome-container">
     <p class="welcome-text">Schön, dass Du da bist!</p>
     <div class="arrow-button">
@@ -61,7 +58,7 @@
 </section>
 
 <section class="normal-section" id="Angebot">
-  <h2 class="fade-in">Mein Angebot</h2>
+  <h2 >Mein Angebot</h2>
   <h3>Als Kassenhebamme in Innsbruck</h3>
   <p>
     Als Kassenhebamme begleite ich euch während der Schwangerschaft und im Wochenbett. Die
@@ -200,7 +197,7 @@
 
 
 <section class="normal-section" id="Über">
-  <h2 class="fade-in">Über mich</h2>
+  <h2 >Mein Weg zur Hebamme</h2>
   <p>
     Ich bin an einem sonnigen Sommertag in einer kleinen Stadt in Bayern geboren und dort auch
     aufgewachsen. Nach meiner Matura habe ich die Ausbildung zur diplomierten Gesundheits- und
@@ -212,7 +209,7 @@
 
 
 <section class="normal-section" id="Über">
-  <h2 class="fade-in">Über mich</h2>
+  <h2 >Berufserfahrung & Persönliches</h2>
   <p>
     Nach meinem Studienabschluss
     habe ich als Hebamme im Kreißsaal, auf der Wochenbettstation und in der gynäkologischen
@@ -227,7 +224,7 @@
 </section>
 
 <section class="normal-section" id="Leitweg">
-  <h2 class="fade-in">Meine Aus- und Fortbildungen</h2>
+  <h2 >Meine Aus- und Fortbildungen</h2>
 
   <ul class="ausbildungsliste">
     <li><p>2018–2021: Diplomierte Gesundheits- und Krankenpflegerin am Klinikum der Universität München</p></li>
@@ -241,7 +238,7 @@
 
 
 <section class="normal-section" id="Begleitung">
-  <h2  class="fade-in">Wie ich euch begleite</h2>
+  <h2  >Wie ich euch begleite</h2>
   <p>
     Mir ist es mir wichtig, in meiner Begleitung hinzusehen, zuzuhören und wahrzunehmen, um so all
     eure Gesundheitszeichen, Ressourcen und Aufmerksamkeitszeichen zu erfassen. Ich betrachte
@@ -255,7 +252,7 @@
 </section>
 
 <section class="normal-section" id="Begleitung">
-  <h2  class="fade-in">Wie ich euch begleite</h2>
+  <h2  >Liebe und Familie stärken</h2>
   <p>
     Besonders freut es mich an meiner Arbeit, eure Liebe wachsen zu lassen: eure Liebe zu euch selbst
     und eurem Körper, eure Liebe als Paar und als Familie sowie die Liebe zu eurem Kind und die
@@ -270,7 +267,7 @@
 </section>
 
 <section class="normal-section" id="Begleitung">
-  <h2  class="fade-in">Wie ich euch begleite</h2>
+  <h2  >Begleitung von Anfang an</h2>
   <p>
     Am liebsten begleite ich euch schon ab der Schwangerschaft. So können wir uns rechtzeitig
     kennenlernen und ich euch als medizinische Fachperson in den Vorbereitungen auf
@@ -279,7 +276,7 @@
 </section>
 
 <section class="normal-section" id="Funfacts">
-  <h2 class="fade-in">Funfacts</h2>
+  <h2 >Funfacts</h2>
 
   <div class="funfact-container">
     <p class="funfact active">
@@ -338,7 +335,7 @@
 </section>
 
 <section class="normal-section" id="Kontakt">
-  <h2 class="fade-in">Kontakt</h2>
+  <h2 >Kontakt</h2>
   <p>Hier kannst Du gleich Kontakt zu mir Aufnehmen.</p> 
   <?php echo do_shortcode('[forminator_form id="53"]'); ?>
 </section>
