@@ -2,10 +2,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
-<video id="bgVideo" autoplay muted loop playsinline>
-    <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/Background.mp4" type="video/mp4">
-</video>
-
+<canvas id="hero"></canvas>
 
 <div class="cbn-navbar-wrapper">
   <nav class="navbar navbar-expand-custom navbar-mainbg fixed-top">
@@ -355,39 +352,5 @@
   </div>
 
 </footer>
-
-<script>
-    const facts = document.querySelectorAll('#Funfacts .funfact');
-    const leftArrow = document.querySelector('#Funfacts .arrow-button.left');
-    const rightArrow = document.querySelector('#Funfacts .arrow-button.right');
-    const randomButton = document.querySelector('#Funfacts .arrow-button.random');
-    let current = 0;
-
-    function showFact(index) {
-      facts.forEach((f, i) => f.classList.toggle('active', i === index));
-    }
-
-    leftArrow.addEventListener('click', () => {
-      current = (current - 1 + facts.length) % facts.length;
-      showFact(current);
-    });
-
-    rightArrow.addEventListener('click', () => {
-      current = (current + 1) % facts.length;
-      showFact(current);
-    });
-
-    randomButton.addEventListener('click', () => {
-      let randomIndex;
-      do {
-        randomIndex = Math.floor(Math.random() * facts.length);
-      } while (randomIndex === current); // nicht derselbe wie aktuell
-      current = randomIndex;
-      showFact(current);
-    });
-</script>
-
-
-
 
 <?php get_footer(); ?>

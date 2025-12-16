@@ -8,9 +8,8 @@
   --font-main: 'Junction', sans-serif;
 }
 
-
-/* --- Hintergrundvideo --- */
-#bgVideo {
+/* --- Hintergrund-Canvas --- */
+#hero {
     position: fixed;
     top: 0;
     left: 0;

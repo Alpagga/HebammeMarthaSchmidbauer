@@ -27,13 +27,12 @@ add_action('wp_enqueue_scripts', function() {
         );
     }
 
-    // ---------------------------
     // JS-Dateien laden
-    // ---------------------------
     $js_files = [
         'horizontal-scroll-js' => '/js/horizontal-scroll.js',
-        'horizontal-scroll-js' => '/js/horizontal-scroll-funfacts.js',
-        'navbar-js'            => '/js/navbar.js'
+        'navbar-js'            => '/js/navbar.js',
+        'funfacts-js'          => '/js/funfacts.js',
+        'background-js'        => '/js/background.js'
     ];
 
     foreach ($js_files as $handle => $path) {

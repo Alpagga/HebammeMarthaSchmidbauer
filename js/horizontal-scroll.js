@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("section");
-  const horizontalWrapper = document.querySelector("#AngebotDetails");
+  const horizontalWrapper = document.querySelector("#horizontalWrapper");
   const hSections = document.querySelectorAll(".h-section");
   let currentHIndex = 0;
   let isAnimating = false;
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const current = getCurrentSection();
 
-    if (current.id === "AngebotDetails") {
+    if (current.id === "horizontalWrapper") {
       const atTop = currentHIndex === 0;
       const atBottom = currentHIndex === hSections.length - 1;
 
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const current = getCurrentSection();
     const delta = e.deltaY;
 
-    if (current.id === "AngebotDetails") {
+    if (current.id === "horizontalWrapper") {
       const atTop = currentHIndex === 0;
       const atBottom = currentHIndex === hSections.length - 1;
 
