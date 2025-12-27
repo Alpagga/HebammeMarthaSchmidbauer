@@ -67,3 +67,6 @@
   margin: 0 auto;
 }
 
+.logo-container svg path {
+  fill: var(--color-brown); 
+}

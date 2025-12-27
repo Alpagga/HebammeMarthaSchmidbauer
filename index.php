@@ -63,7 +63,7 @@
 </p>
 </section>
 
-<section class="horizontal-wrapper" id="horizontalWrapper">
+<section class="horizontal-wrapper" id="AngebotDetails">
   <div class="horizontal-inner">
     <div class="h-section" id="h1">
       <div class="circle">

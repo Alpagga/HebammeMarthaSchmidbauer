@@ -14,12 +14,12 @@
 .page-wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* mindestens volle Höhe des Viewports */
+  min-height: 100vh;
 }
 
 /* Main nimmt den restlichen Platz ein */
 main {
-  flex: 1; /* wächst automatisch, wenn wenig Content */
+  flex: 1;
 }
 
 /* Footer bleibt unten, aber nicht sticky */
@@ -30,6 +30,7 @@ main {
   padding: 2rem 1rem;
 }
 
+/* Keine Animation in Impressum */
 .no-animation .fade-in,
 .no-animation h1,
 .no-animation h2,

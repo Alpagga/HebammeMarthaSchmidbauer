@@ -129,35 +129,45 @@ document.addEventListener("DOMContentLoaded", function () {
     const navItems = document.querySelectorAll(".cbn-navbar-wrapper #navbarSupportedContent li");
     const navLinks = document.querySelectorAll(".cbn-navbar-wrapper #navbarSupportedContent a");
 
-    // Funktion zur Aktualisierung der jQuery-Navigation + hori-selector
-    function activateNavById(id) {
-        navItems.forEach((item) => item.classList.remove("active"));
-        const activeItem = document.querySelector(`.cbn-navbar-wrapper a[href="#${id}"]`);
+// Funktion zur Aktualisierung der jQuery-Navigation + hori-selector
+function activateNavById(id) {
 
-        if (activeItem) {
-            activeItem.parentElement.classList.add("active");
+    // EINZIGE Ausnahme
+    if (id === "AngebotDetails") {
+        id = "Angebot";
+    }
 
-            // WICHTIG: Dein jQuery reposition() Trigger
-            if (typeof jQuery !== "undefined") {
-                setTimeout(() => {
-                    jQuery(document).ready(function ($) {
-                        var wrapper = $('.cbn-navbar-wrapper');
-                        var tabsNewAnim = wrapper.find('#navbarSupportedContent');
-                        var activeItemNewAnim = tabsNewAnim.find('.active');
-                        if (!activeItemNewAnim.length) return;
+    navItems.forEach((item) => item.classList.remove("active"));
 
-                        var itemPos = activeItemNewAnim.position();
-                        $(".hori-selector").css({
-                            top: itemPos.top + "px",
-                            left: itemPos.left + "px",
-                            height: activeItemNewAnim.innerHeight() + "px",
-                            width: activeItemNewAnim.innerWidth() + "px"
-                        });
+    const activeItem = document.querySelector(
+        `.cbn-navbar-wrapper a[href="#${id}"]`
+    );
+
+    if (activeItem) {
+        activeItem.parentElement.classList.add("active");
+
+        // WICHTIG: Dein jQuery reposition() Trigger
+        if (typeof jQuery !== "undefined") {
+            setTimeout(() => {
+                jQuery(document).ready(function ($) {
+                    var wrapper = $('.cbn-navbar-wrapper');
+                    var tabsNewAnim = wrapper.find('#navbarSupportedContent');
+                    var activeItemNewAnim = tabsNewAnim.find('.active');
+                    if (!activeItemNewAnim.length) return;
+
+                    var itemPos = activeItemNewAnim.position();
+                    $(".hori-selector").css({
+                        top: itemPos.top + "px",
+                        left: itemPos.left + "px",
+                        height: activeItemNewAnim.innerHeight() + "px",
+                        width: activeItemNewAnim.innerWidth() + "px"
                     });
-                }, 50);
-            }
+                });
+            }, 50);
         }
     }
+}
+
 
     // IntersectionObserver definiert aktive Section
 const observer = new IntersectionObserver(

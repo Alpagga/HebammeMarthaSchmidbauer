@@ -3,7 +3,6 @@ html, body {
   width: 100%;
 }
 
-
 @media (max-width: 768px) {
   .h-section {
     padding: 1rem;
@@ -34,7 +33,6 @@ html, body {
   flex-direction: column;
   background: transparent;
   scroll-snap-align: start;
-  padding: 2rem;
   color: var(--color-brown);
 }
 
@@ -96,12 +94,7 @@ html, body {
   color: var(--color-brown);
 }
 
-
-
-
-
-
-
+/* Ausbildungsliste */
 .normal-section ul.ausbildungsliste {
   list-style: none;
   padding-left: 2rem;   /* Platz für die Linie und Pfeil */
@@ -149,14 +142,9 @@ html, body {
   line-height: 1.4; /* optional: Abstand zwischen den Zeilen innerhalb eines <p> */
 }
 
+/* End Ausbildungsliste */
 
-
-
-
-
-
-
-
+/* Funfacts */
 #Funfacts {
   display: flex;
   flex-direction: column;
@@ -254,14 +242,10 @@ html, body {
     gap: 4rem;
   }
 }
+/* End Funfacts */
 
 
-
-.normal-section {
-  padding: 0;
-  margin: 0;
-}
-
+/* Image Section */
 .fullscreen-image-section {
   position: relative;
   width: 100vw;
@@ -300,5 +284,11 @@ html, body {
 
 .overlay-text h2 {
   font-size: 2.9rem;      /* Größe nach Belieben anpassen */
+  margin: 0;
+}
+/* Image Section */
+
+.normal-section {
+  padding: 0;
   margin: 0;
 }
