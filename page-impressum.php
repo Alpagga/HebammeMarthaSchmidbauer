@@ -6,7 +6,9 @@ get_header();
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
-<canvas id="hero"></canvas>
+<!-- Für ein div -->
+<div id="hero" style="width:100%; height:100%; background-image:url('https://www.hebammemarthaschmidbauer.at/wp-content/themes/PersonalTheme/assets/videos/Background/frame_01.png'); background-size:cover; background-position:center;"></div>
+
 
 <div class="cbn-navbar-wrapper">
     <nav class="navbar navbar-expand-custom navbar-mainbg fixed-top">
