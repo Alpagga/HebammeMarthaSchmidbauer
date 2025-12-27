@@ -27,6 +27,7 @@ add_action('wp_enqueue_scripts', function() {
         );
     }
 
+
     // JS-Dateien laden
     $js_files = [
         'horizontal-scroll-js' => '/js/horizontal-scroll.js',

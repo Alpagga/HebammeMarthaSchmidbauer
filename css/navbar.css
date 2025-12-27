@@ -214,8 +214,7 @@ i {
 
 
 .navbar-logo svg {
-    width: 25px;       /* gewünschte Breite */
-    height: auto;
+    height: 35px;       
     display: block;
     fill: white;       /* Logo weiß färben */
 }

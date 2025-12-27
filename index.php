@@ -185,12 +185,19 @@
 
 <section class="normal-section" id="Über">
   <div class="fullscreen-image-section">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/photos/HebammeMarthaPortrait.jpg" alt="Hebamme Martha Portrait">
+    <img 
+      src="<?php echo get_template_directory_uri(); ?>/assets/photos/HebammeMarthaPortrait.jpg" 
+      alt="Hebamme Martha Portrait"
+      loading="lazy"
+      width="1280" 
+      height="720"
+    >
     <div class="overlay-text">
       <h2>Über mich</h2>
     </div>
   </div>
 </section>
+
 
 
 <section class="normal-section" id="Über">
@@ -257,9 +264,6 @@
     In meiner Begleitung ist es mir egal, wer ihr seid, aus welchem Hintergrund und Umfeld ihr kommt
     und in welcher Familienkonstellation ihr lebt. Ihr alle verdient selbstverständlich meinen Respekt
     und Unterstützung.
-    Am liebsten begleite ich euch schon ab der Schwangerschaft. So können wir uns rechtzeitig
-    kennenlernen und ich euch als medizinische Fachperson in den Vorbereitungen auf
-    Schwangerschaft, Geburt, Stillen und Wochenbett begleiten.
 </p>
 </section>
 
@@ -330,6 +334,7 @@
     </div>
   </div>
 </section>
+
 
 <section class="normal-section" id="Kontakt">
   <h2 >Kontakt</h2>

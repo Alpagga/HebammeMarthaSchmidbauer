@@ -6,9 +6,7 @@ get_header();
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
-<video id="bgVideo" autoplay muted loop playsinline>
-    <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/Background.mp4" type="video/mp4">
-</video>
+<canvas id="hero"></canvas>
 
 <div class="cbn-navbar-wrapper">
     <nav class="navbar navbar-expand-custom navbar-mainbg fixed-top">

@@ -58,37 +58,43 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-const fadeElements = document.querySelectorAll('h1, h2, h3, p');
+const fadeElements = document.querySelectorAll('h1, h2, h3, p, .arrow-button, .ausbildungsliste');
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    const tag = entry.target.tagName;
-
-    // Basis-Verzögerung pro Typ
     let baseDelay = 0;
-    switch(tag) {
-      case 'H1': baseDelay = 0; break;   // h1 sofort
-      case 'H2': baseDelay = 150; break; // h2 leicht verzögert
-      case 'H3': baseDelay = 300; break; // h3 noch mehr
-      case 'P':  baseDelay = 450; break; // p am langsamsten
-    }
+
+        if (entry.target.classList.contains('arrow-button')) {
+        baseDelay = 450; // Delay für Buttons
+        } else if (entry.target.classList.contains('ausbildungsliste')) {
+        baseDelay = 350; // Delay für Listen
+        } else {
+        switch(entry.target.tagName) {
+            case 'H1': baseDelay = 0; break;
+            case 'H2': baseDelay = 150; break;
+            case 'H3': baseDelay = 250; break;
+            case 'P':  baseDelay = 350; break;
+        }
+        }
 
     if (entry.isIntersecting) {
       setTimeout(() => entry.target.classList.add('visible'), baseDelay);
     } else {
-      entry.target.classList.remove('visible'); // wieder ausblenden beim Verlassen
+      entry.target.classList.remove('visible');
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0 });
 
-// Alle beobachten
 fadeElements.forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
+
+  requestAnimationFrame(() => {
+    if (el.getBoundingClientRect().top < window.innerHeight) {
+      el.classList.add('visible');
+    }
+  });
 });
-
-
-
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -169,31 +175,34 @@ function activateNavById(id) {
 }
 
 
-    // IntersectionObserver definiert aktive Section
+// IntersectionObserver definiert aktive Section
+
 const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                const id = entry.target.id;
+  (entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
 
-                // Wenn horizontalWrapper aktiv ist:
-                if (entry.target.classList.contains("horizontalWrapper")) {
+      const id = entry.target.id || "";
 
-                    activateNavById("Angebot");
+      // Spezialfall horizontalWrapper
+      if (entry.target.classList.contains("horizontalWrapper")) {
+        activateNavById("Angebot");
+        return;
+      }
 
-                    return; 
-                }
-
-                // Alle normalen Sections → Hash + Navbar
-                history.replaceState(null, null, "#" + id);
-                activateNavById(id);
-            }
-        });
-    },
-    { threshold: 0.55 }
+      // Normalfall → URL + Navbar
+      if (id) {
+        history.replaceState(null, null, "#" + id);
+        activateNavById(id);
+      }
+    });
+  },
+  { threshold: 0.5 } // 50% der Section sichtbar
 );
 
-sections.forEach((sec) => observer.observe(sec));
+sections.forEach(sec => observer.observe(sec));
+
+
 
 });
 

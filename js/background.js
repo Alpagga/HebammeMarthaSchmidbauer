@@ -1,11 +1,12 @@
 const canvas = document.getElementById("hero");
 const ctx = canvas.getContext("2d");
 
-const FRAME_COUNT = 58;
-const FPS = 6;
+const FRAME_COUNT = 30;
+const FPS = 8;
 const WIDTH = 1280;
 const HEIGHT = 720;
 const BASE_PATH = "https://www.hebammemarthaschmidbauer.at/wp-content/themes/PersonalTheme/assets/videos/Background/";
+const EXT = canUseWebP() ? "webp" : "png";
 
 let images = new Array(FRAME_COUNT);
 let frame = 0;
@@ -13,6 +14,17 @@ let dir = 1;
 let raf;
 let lastTime = 0;
 let started = false;
+
+
+function canUseWebP() {
+  // Prüft WebP-Unterstützung via Canvas
+  const canvasTest = document.createElement('canvas');
+  if (!!(canvasTest.getContext && canvasTest.getContext('2d'))) {
+    return canvasTest.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+  }
+  return false;
+}
+
 
 /* =========================
    Canvas Setup (Retina)
@@ -34,7 +46,7 @@ window.addEventListener("resize", resize);
 function loadFrame(i) {
   if (!images[i]) {
     const img = new Image();
-    img.src = `${BASE_PATH}frame_${String(i + 1).padStart(2, "0")}.png`;
+    img.src = `${BASE_PATH}frame_${String(i + 1).padStart(2, "0")}.${EXT}`;
     img.onload = () => {
       images[i] = img;
     };
@@ -96,9 +108,12 @@ document.addEventListener("visibilitychange", () => {
   }
 });
 
-/* =========================
-   Start Animation
-========================= */
-loadFrame(0); // Load first frame immediately
-started = true;
-requestAnimationFrame(loop);
+// =========================
+// Start Animation mit WebP/PNG Fallback
+// =========================
+images[0] = new Image();
+images[0].src = `${BASE_PATH}frame_01.${EXT}`;
+images[0].onload = () => {
+  lastTime = performance.now();
+  requestAnimationFrame(loop);
+};
