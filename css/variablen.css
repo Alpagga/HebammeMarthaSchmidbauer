@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
   /* --- Farben --- */
   --color-orange: #FF6600;       
@@ -91,4 +92,99 @@ h1, h2, h3 {
 #s6 .forminator-ui,
 #s6 .forminator-ui * {
   font-family: var(--font-main) !important;
+=======
+:root {
+  /* --- Farben --- */
+  --color-orange: #FF6600;       
+  --color-white: #FFF8E7;     
+  --color-brown: #5C4033;
+
+  /* --- Schriftarten --- */
+  --font-heading: 'Georgia', serif;  /* h1, h2 */
+  --font-base: 'Arial', sans-serif;  /* Fließtext */
+}
+
+
+:root {
+  /* --- Farben --- */
+  --color-orange: #FF6600;       
+  --color-white: #fffbf7;     
+  --color-brown: #1c0e00;
+
+  /* --- Schrift --- */
+  --font-main: 'Junction', sans-serif;
+}
+
+/* --- Hintergrund-Canvas --- */
+#hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+/* --- Standard-Schrift --- */
+body {
+  font-family: var(--font-main);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-main);
+  font-weight: bold;
+}
+
+
+/* --- Sections --- */
+.normal-section h1, .h-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.normal-section h2, .h-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.normal-section h3, .h-section h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+.normal-section p, .h-section p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  max-width: 95vw; 
+}
+
+
+@media (max-width: 768px) {
+  .normal-section h1,
+  .h-section h1 {
+    font-size: 1.4rem;
+  }
+  .normal-section h2,
+  .h-section h2 {
+    font-size: 1.4rem;
+  }
+  .normal-section h3,
+  .h-section h3 {
+    font-size: 1rem;
+  }
+  .normal-section p,
+  .h-section p {
+    font-size: 0.85rem;
+  }
+}
+
+/* --- Forminator --- */
+#s6 .forminator-ui,
+#s6 .forminator-ui * {
+  font-family: var(--font-main) !important;
+>>>>>>> c28808a4cf6732635907c4c3c8b6c85a7d87d235
 }

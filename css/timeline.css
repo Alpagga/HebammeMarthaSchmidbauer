@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .h-section {
   position: relative;
   text-align: center;
@@ -101,3 +102,108 @@
 .icon-svg svg path {
   fill: var(--color-brown); /* falls dein SVG paths nutzt */
 }
+=======
+.h-section {
+  position: relative;
+  text-align: center;
+  padding-top: 10vw; 
+}
+
+/* Standardkreis */
+.circle {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10vw;
+  height: 10vw;
+  border: 0.5vw solid var(--color-brown);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+}
+
+.circletop {
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+  border: 0.5vw solid var(--color-brown);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+}
+
+
+
+
+/* Bild im Kreis */
+.circle img {
+  width: 40%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* SVG-Linien */
+.circle .lines {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 2vw;
+  pointer-events: none;
+  z-index: 0;
+  stroke: var(--color-brown);
+}
+
+
+/* --- Mobile Anpassung --- */
+@media (max-width: 768px) {
+  .h-section {
+    padding-top: 23vh; /* gleiche Höhe wie Kreis auf Mobil */
+  }
+
+  .circle {
+    width: 23vh;  
+    height: 23vh;
+    border-width: 0.7vh; /* proportional zum Kreis */
+  }
+
+  .circletop {
+    width: 23vh;  
+    height: 23vh;
+    border-width: 0.7vh; /* proportional zum Kreis */
+  }
+
+  .circle .lines {
+    width: 100vw;    
+    height: 3vh;
+  }
+
+  .circle img {
+    width: 35%;     
+  }
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+}
+
+.icon-svg svg {
+  width: 60px;
+  height: 60px;
+  display: block;
+  position: relative;
+  z-index: 3;
+}
+
+.icon-svg svg path {
+  fill: var(--color-brown); /* falls dein SVG paths nutzt */
+}
+>>>>>>> c28808a4cf6732635907c4c3c8b6c85a7d87d235

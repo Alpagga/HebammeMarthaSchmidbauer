@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html, body {
   overflow-x: hidden;
   width: 100%;
@@ -316,3 +317,323 @@ html, body {
   padding: 0;
   margin: 0;
 }
+=======
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .h-section {
+    padding: 1rem;
+  }
+  .h-section h1,
+  .h-section h2,
+  .h-section p {
+    max-width: 90%;
+  }
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: system-ui, sans-serif;
+}
+
+/* --- Standardabschnitte --- */
+.normal-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background: transparent;
+  scroll-snap-align: start;
+  color: var(--color-brown);
+}
+
+/* --- Horizontal Scroll Abschnitt --- */
+.horizontal-wrapper {
+  position: relative;
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  background: var(--color-white);
+
+  /* Kein Überstand auf iPhone / Mobile */
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.horizontal-inner {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.h-section {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background: var(--color-white);
+  scroll-snap-align: start;
+  transition: background 0.3s;
+  text-align: center;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;    
+  box-sizing: border-box;
+}
+
+.h-section p {
+  max-width: 75vw;     
+  word-wrap: break-word; 
+  word-break: break-word;
+  white-space: normal;  
+  margin: 1rem auto 0; 
+  position: relative;
+}
+
+
+.h-section h3 {
+  margin-top: 2rem; /* kleiner Abstand unterhalb des Kreises */
+  margin-bottom: 0.5rem; /* Abstand zum p direkt steuern */
+}
+
+
+.h-section.active {
+  color: var(--color-brown);
+}
+
+/* Ausbildungsliste */
+.normal-section ul.ausbildungsliste {
+  list-style: none; 
+  margin: 1rem 0 0 0;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  position: relative;   /* für die vertikale Linie */
+}
+
+/* durchgezogene Linie links */
+.normal-section ul.ausbildungsliste::before {
+  content: "";
+  position: absolute;
+  left: 1rem;          /* Position der Linie */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--color-brown);
+}
+
+/* Pfeilspitze unten */
+.normal-section ul.ausbildungsliste::after {
+  content: "";
+  position: absolute;
+  left: 0.75rem;             /* Linie zentriert für die Spitze */
+  bottom: -0.25rem;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 8px solid var(--color-brown);
+}
+
+.normal-section ul.ausbildungsliste li {
+  margin: 0.5rem 0;
+  max-width: 70vw;
+  position: relative;
+}
+
+.ausbildungsliste p {
+  margin: 0; 
+  line-height: 1.4; 
+}
+
+.ausbildungsliste {
+  opacity: 0; /* unsichtbar starten */
+  transform: translateY(20px); /* leicht verschoben starten */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.ausbildungsliste.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* End Ausbildungsliste */
+
+/* Funfacts */
+#Funfacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* horizontal zentriert */
+  justify-content: flex-start; /* nach oben ausrichten */
+  padding-top: 30vh; /* Abstand nach oben */
+  padding-bottom: 6rem;
+  position: relative; /* nur falls andere absolute Elemente drin sind */
+  text-align: center;
+}
+
+#Funfacts h2 {
+  margin: 0 0 2rem 0; /* optional: Abstand nach unten */
+}
+
+
+/* Funfact Container darunter */
+.funfact-container {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+
+.funfact-container p.funfact {
+  display: none;
+  margin: 0;
+}
+
+.funfact-container p.funfact.active {
+  display: block;
+}
+
+
+/* Pfeile mittig unten, 2vh über Rand */
+.funfact-arrows {
+  position: absolute;
+  bottom: 15vh; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6rem; /* Abstand zwischen den Pfeilen */
+}
+
+
+
+
+/* --- Pulsierender Pfeil-Button --- */
+/* Pfeile mittig unten */
+.funfact-arrows {
+  position: absolute;
+  bottom: 15vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6rem;
+}
+
+/* Pfeil-Button ohne Puls */
+.arrow-button {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid var(--color-brown);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.arrow-button {
+  opacity: 0; /* unsichtbar starten */
+  transform: translateY(20px); /* leicht verschoben starten */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.arrow-button.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover */
+.arrow-button:hover {
+  background-color: var(--color-brown);
+}
+
+.arrow {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-left: 2px solid var(--color-brown);
+  transition: border-color 0.3s;
+}
+
+.arrow-button:hover .arrow {
+  border-color: var(--color-white);
+}
+
+.arrow-button.right .arrow {
+  transform: rotate(225deg);
+}
+
+.arrow-button.left .arrow {
+  transform: rotate(45deg);
+}
+
+/* Mobile-Anpassung */
+@media (max-width: 768px) {
+  .arrow-button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .funfact-arrows {
+    gap: 4rem;
+  }
+}
+/* End Funfacts */
+
+
+/* Image Section */
+.fullscreen-image-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;       /* Fullscreen */
+  overflow: hidden;
+}
+
+.fullscreen-image-section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* Bild proportional skaliert */
+  z-index: -1;          /* Bild hinter Text */
+}
+
+.overlay-text {
+  position: absolute;
+  top: 75vh;            
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;         /* Textfarbe */
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7); /* optional für bessere Lesbarkeit */
+  z-index: 1;
+}
+
+/* Mobile Anpassung */
+@media (max-width: 768px) {
+  .overlay-text {
+    top: 80vh; /* auf mobilen Geräten 20vh von oben */
+     white-space: nowrap; /* sicherstellen, dass es nicht umbricht */
+  }
+}
+
+.overlay-text h2 {
+  font-size: 2.9rem;      /* Größe nach Belieben anpassen */
+  margin: 0;
+}
+/* Image Section */
+
+.normal-section {
+  padding: 0;
+  margin: 0;
+}
+>>>>>>> c28808a4cf6732635907c4c3c8b6c85a7d87d235
