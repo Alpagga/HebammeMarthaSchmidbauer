@@ -17,10 +17,17 @@ jQuery(document).ready(function($) {
   setTimeout(reposition, 300);
   $(window).on('resize', () => setTimeout(reposition, 500));
 
-  $(document).on("click", ".cbn-navbar-wrapper #navbarSupportedContent li", function() {
-    $('.cbn-navbar-wrapper #navbarSupportedContent ul li').removeClass("active");
-    $(this).addClass('active');
-    reposition();
+  $(document).on("click", ".cbn-navbar-wrapper #navbarSupportedContent li a", function() {
+      // Active-Klasse setzen
+      $('.cbn-navbar-wrapper #navbarSupportedContent ul li').removeClass("active");
+      $(this).parent().addClass("active");
+      reposition();
+
+      // Navbar auf Mobil schließen (falls sichtbar)
+      var navbarCollapse = $(".cbn-navbar-wrapper .navbar-collapse");
+      if(navbarCollapse.is(":visible")) {
+          navbarCollapse.slideUp(300); // animiert schließen
+      }
   });
 
   $(".cbn-navbar-wrapper .navbar-toggler").click(function() {
@@ -202,9 +209,9 @@ const observer = new IntersectionObserver(
 
 sections.forEach(sec => observer.observe(sec));
 
-
-
 });
+
+
 
 
 

@@ -244,12 +244,12 @@
 <section class="normal-section" id="Begleitung">
   <h2  >Wie ich euch begleite</h2>
   <p>
-    Mir ist es mir wichtig, in meiner Begleitung hinzusehen, zuzuhören und wahrzunehmen, um so all
+    Mir ist es wichtig, in meiner Begleitung hinzusehen, zuzuhören und wahrzunehmen, um so all
     eure Gesundheitszeichen, Ressourcen und Aufmerksamkeitszeichen zu erfassen. Ich betrachte
     Schwangerschaft, Geburt und Wochenbett grundsätzlich als gesunde und natürliche Prozesse und
     euch als die Expert:innen für euch selbst. Ich stehe euch mit Rat und Tat zur Seite, um euch
     evidenzbasiert dabei zu unterstützen, das Wunder eures Körpers kennenzulernen und euren Weg zu
-    finden. Elternwerden und als Familie zusammenzuwachsen ist ein Prozess, zu dem neben vielen
+    finden. Eltern werden und als Familie zusammenzuwachsen ist ein Prozess, zu dem neben vielen
     schönen Momenten auch Herausforderungen gehören können. Ich möchte euch dabei helfen,
     gestärkt aus diesem Major Life Event hervorzugehen.
 </p>
@@ -293,7 +293,7 @@
       nach der Geburt wieder.
     </p>
     <p class="funfact">
-      Die Gebärmutter kann während der Schwangerschaft um das 500-fache ihrer ursprünglichen Größe
+      Die Gebärmutter kann während der Schwangerschaft um das 20-fache ihrer ursprünglichen Größe
       wachsen.
     </p>
     <p class="funfact">

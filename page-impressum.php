@@ -39,7 +39,7 @@ get_header();
       <p><strong>Martha Schmidbauer BSc</strong></p>
       <p>Seilergasse 16<br>
         6020 Innsbruck, Österreich</p>
-      <p>Tel.: +43 68110808317<br>
+      <p>Tel.: +43 677/61194950<br>
         E-Mail: <a href="mailto:info@hebammemarthaschmidbauer.at">info@hebammemarthaschmidbauer.at</a></p>
 
       <p>Mitglied des österreichischen Hebammengremiums<br>
