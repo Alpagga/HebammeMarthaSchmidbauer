@@ -1,0 +1,52 @@
+/* Footer Container */
+.cbn-footer {
+  font-size: 0.95rem;
+  background: var(--color-brown);
+  color: var(--color-white);
+  padding: 2rem 1rem;
+}
+
+/* Footer Links & Text */
+.cbn-footer a {
+  text-decoration: none;
+  color: var(--color-white);
+  transition: all 0.3s ease-in-out;
+  margin-left: 1rem;
+}
+
+.cbn-footer a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.cbn-footer p {
+  margin: 0;
+  color: var(--color-white);
+  text-align: center;
+}
+
+/* Flexbox Layout */
+.cbn-footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .cbn-footer .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-text {
+  text-align: center;
+}
